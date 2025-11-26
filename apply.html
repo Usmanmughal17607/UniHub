@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apply Now - Global City University</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="contact-info">
+                <span><i class="fas fa-phone"></i> +92 51 111 000 248</span>
+                <span><i class="fas fa-envelope"></i> <a href="mailto:hafizfahadbinabdulhafeezhijazi@gmail.com" style="color: inherit; text-decoration: none;">hafizfahadbinabdulhafeezhijazi@gmail.com</a></span>
+            </div>
+            <div class="social-links">
+                <a href="https://www.facebook.com/fahad.hijazi" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://twitter.com/gcu" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com/fahad.hijazi.111/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                <a href="https://wa.me/923001234567" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="logo.jpg" alt="GCU Logo" class="logo-img">
+                <div class="logo-text">
+                    <h1>GCU</h1>
+                    <p>Global City University</p>
+                </div>
+            </a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="academics.html">Academics</a></li>
+                    <li><a href="admissions.html">Admissions</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Application Form -->
+    <section class="application-container">
+        <div class="container">
+            <div class="application-form">
+                <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" id="applicationForm">
+                <div class="form-header">
+                    <h1>Apply Now</h1>
+                    <p>Complete your application to join Global City University</p>
+                </div>
+
+                <!-- Step Indicators -->
+                <div class="form-steps">
+                    <div class="step-indicator">
+                        <div class="step-number active" id="step1-number">1</div>
+                        <span class="step-label active">Personal Info</span>
+                    </div>
+                    <div class="step-indicator">
+                        <div class="step-number" id="step2-number">2</div>
+                        <span class="step-label">Program & Documents</span>
+                    </div>
+                    <div class="step-indicator">
+                        <div class="step-number" id="step3-number">3</div>
+                        <span class="step-label">Payment</span>
+                    </div>
+                </div>
+
+                <!-- Step 1: Personal Information -->
+                <div class="form-step active" id="step1">
+                    <h3>Personal Information</h3>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName">First Name *</label>
+                            <input type="text" id="firstName" name="firstName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Last Name *</label>
+                            <input type="text" id="lastName" name="lastName" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group full-width">
+                            <label for="cnic">CNIC *</label>
+                            <input type="text" id="cnic" name="cnic" placeholder="12345-1234567-1" pattern="\d{5}-\d{7}-\d{1}" required>
+                        </div>
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="address">Address *</label>
+                        <textarea id="address" name="address" required></textarea>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="dob">Date of Birth *</label>
+                            <input type="date" id="dob" name="dob" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="nationality">Nationality *</label>
+                            <input type="text" id="nationality" name="nationality" required>
+                        </div>
+                    </div>
+                    <div class="form-buttons">
+                        <button type="button" class="btn btn-secondary" onclick="prevStep()">Previous</button>
+                        <button type="button" class="btn" onclick="nextStep()">Next Step</button>
+                    </div>
+                </div>
+
+                <!-- Step 2: Program Selection & Documents -->
+                <div class="form-step" id="step2">
+                    <h3>Program Selection & Documents</h3>
+                    <div class="form-group">
+                        <label for="program">Select Program *</label>
+                        <select id="program" name="program" required>
+                            <option value="">Choose a program...</option>
+                            <option value="computer-science">Bachelor of Computer Science</option>
+                            <option value="business-administration">Bachelor of Business Administration</option>
+                            <option value="engineering">Bachelor of Engineering</option>
+                            <option value="arts">Bachelor of Arts</option>
+                            <option value="science">Bachelor of Science</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="previousEducation">Previous Education *</label>
+                        <input type="text" id="previousEducation" name="previousEducation" placeholder="e.g., High School, College" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Upload Documents *</label>
+                        <div class="file-upload" onclick="document.getElementById('documents').click()">
+                            <i class="fas fa-cloud-upload-alt"></i>
+                            <p>Click to upload your documents</p>
+                            <p style="font-size: 0.9rem; color: var(--text-light);">(Transcripts, ID, Certificates)</p>
+                            <input type="file" id="documents" name="documents" multiple style="display: none;" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="personalStatement">Personal Statement</label>
+                        <textarea id="personalStatement" name="personalStatement" placeholder="Tell us about yourself and why you want to join GCU..."></textarea>
+                    </div>
+                    <div class="form-buttons">
+                        <button type="button" class="btn btn-secondary" onclick="prevStep()">Previous</button>
+                        <button type="button" class="btn" onclick="nextStep()">Next Step</button>
+                    </div>
+                </div>
+
+                <!-- Step 3: Payment -->
+                <div class="form-step" id="step3">
+                    <h3>Payment & Submission</h3>
+                    <div class="payment-summary">
+                        <h4>Application Summary</h4>
+                        <div class="payment-item">
+                            <span>Application Fee:</span>
+                            <span>Rs. 2,000</span>
+                        </div>
+                        <div class="payment-item">
+                            <span>Processing Fee:</span>
+                            <span>Rs. 500</span>
+                        </div>
+                        <div class="payment-item payment-total">
+                            <span>Total Amount:</span>
+                            <span>Rs. 2,500</span>
+                        </div>
+                    </div>
+                    
+                    <div class="payment-instructions">
+                        <h4>Payment Instructions</h4>
+                        <div class="payment-method">
+                            <h5><i class="fas fa-university"></i> Bank Transfer</h5>
+                            <p><strong>Bank:</strong> HBL Bank</p>
+                            <p><strong>Account Title:</strong> Global City University</p>
+                            <p><strong>Account Number:</strong> 1234-5678-9012-3456</p>
+                            <p><strong>IBAN:</strong> PK36HABB0000123456789012</p>
+                        </div>
+                        
+                        <div class="payment-method">
+                            <h5><i class="fas fa-mobile-alt"></i> EasyPaisa/JazzCash</h5>
+                            <p><strong>Number:</strong> +92 300 1234567</p>
+                            <p><strong>Account Title:</strong> GCU Admissions</p>
+                        </div>
+                        
+                        <div class="payment-note">
+                            <p><i class="fas fa-info-circle"></i> <strong>Important:</strong> Please include your full name and "Application Fee" in the payment description.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="form-buttons">
+                        <button type="button" class="btn btn-secondary" onclick="prevStep()">Previous</button>
+                        <button type="button" class="btn" onclick="submitApplication()">Submit Application</button>
+                    </div>
+                </div>
+
+                <!-- Success Message -->
+                <div class="form-step" id="success">
+                    <div class="success-message">
+                        <i class="fas fa-check-circle"></i>
+                        <h2>Application Submitted Successfully!</h2>
+                        <p>Thank you for applying to Global City University. We have received your application and will review it shortly.</p>
+                        <p>You will receive a confirmation email with your application details and next steps.</p>
+                        <div style="margin-top: var(--spacing-lg);">
+                            <a href="index.html" class="btn">Back to Home</a>
+                        </div>
+                    </div>
+                </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <h3>About GCU</h3>
+                    <p>Global City University is committed to academic excellence, research, and community engagement. We strive to develop future leaders through quality education.</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="academics.html">Academics</a></li>
+                        <li><a href="admissions.html">Admissions</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Education Ave, Knowledge City</p>
+                    <p><i class="fas fa-phone"></i> +92 51 111 000 248</p>
+                    <p><i class="fas fa-envelope"></i> info@gcu.edu.pk</p>
+                </div>
+                <div class="footer-newsletter">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to our newsletter for the latest updates.</p>
+                    <form>
+                        <input type="email" placeholder="Your Email">
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Global City University. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    
+    <!-- Test script to check if JavaScript is working -->
+    <script>
+        console.log('Apply page loaded');
+        
+        // Check if nextStep function exists
+        if (typeof nextStep === 'function') {
+            console.log('nextStep function is available');
+        } else {
+            console.log('nextStep function is NOT available');
+            
+            // Create a simple fallback function
+            window.nextStep = function() {
+                console.log('Fallback nextStep called');
+                const currentStep = document.querySelector('.form-step.active');
+                const nextStep = currentStep.nextElementSibling;
+                
+                if (nextStep && nextStep.classList.contains('form-step')) {
+                    currentStep.classList.remove('active');
+                    nextStep.classList.add('active');
+                    console.log('Moved to next step');
+                }
+            };
+            
+            window.prevStep = function() {
+                console.log('Fallback prevStep called');
+                const currentStep = document.querySelector('.form-step.active');
+                const prevStep = currentStep.previousElementSibling;
+                
+                if (prevStep && prevStep.classList.contains('form-step')) {
+                    currentStep.classList.remove('active');
+                    prevStep.classList.add('active');
+                    console.log('Moved to previous step');
+                }
+            };
+            
+            window.submitApplication = function() {
+                console.log('Fallback submitApplication called');
+                const currentStep = document.querySelector('.form-step.active');
+                const successStep = document.getElementById('success');
+                
+                if (currentStep && successStep) {
+                    currentStep.classList.remove('active');
+                    successStep.classList.add('active');
+                    console.log('Application submitted');
+                }
+            };
+        }
+        
+        // Test button click
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('DOM loaded');
+            
+            // Add click event listeners to all buttons
+            const nextButtons = document.querySelectorAll('button[onclick*="nextStep"]');
+            nextButtons.forEach(button => {
+                button.addEventListener('click', function(e) {
+                    console.log('Next button clicked via event listener');
+                });
+            });
+        });
+    </script>
+</body>
+</html> 
